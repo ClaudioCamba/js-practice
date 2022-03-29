@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Write a function called add7 that takes one number and returns that number + 7.
+      function add7(num) {
+        console.log("add7 function result: " + (num + 7));
+      }
+      add7(7); // Run add7 function
+
+      // Write a function called multiply that takes 2 numbers and returns their product.
+      let multiply = (c, d) =>
+        console.log("multiply function result: " + c * d);
+
+      multiply(2, 5); // Run multiple function
+
+      // Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+      function capitalize(str) {
+        if (typeof str == "string") {
+          console.log(
+            "capitalize function result: " +
+              str.charAt(0).toUpperCase() +
+              str.substr(1, str.length - 1).toLowerCase()
+          );
+        } else {
+          console.log("This function only works with strings");
+        }
+      }
+      capitalize("mINA"); // Run capitalize function
+
+      // Write a function called lastLetter that takes a string and returns the very last letter of that string: lastLetter("abcd") should return "d" //
+      let lastLetter = (str) => console.log(str.substr(-1));
+
+      lastLetter("abcd");
+    </script>
+  </body>
+</html>
