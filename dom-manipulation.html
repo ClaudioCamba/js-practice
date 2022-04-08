@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let pageContent = {
+        pageBody: document.querySelector("body"),
+        paraRed: document.createElement("p"),
+        h3blue: document.createElement("h3"),
+        div: document.createElement("div"),
+        h1: document.createElement("h1"),
+        p: document.createElement("p"),
+      };
+
+      pageContent.paraRed.innerHTML = "Hey I'm red!";
+      pageContent.paraRed.style.color = "#FF0000";
+      pageContent.pageBody.appendChild(pageContent.paraRed);
+
+      pageContent.h3blue.innerHTML = "I'm a blue h3!";
+      pageContent.h3blue.style.color = "#0000FF";
+      pageContent.pageBody.appendChild(pageContent.h3blue);
+
+      pageContent.div.setAttribute(
+        "style",
+        "border: 1px solid #000; background-color: pink;"
+      );
+      pageContent.h1.innerText = "I'm in a div";
+      pageContent.p.innerText = "ME TOO!";
+
+      pageContent.div.appendChild(pageContent.h1);
+      pageContent.div.appendChild(pageContent.p);
+      pageContent.pageBody.appendChild(pageContent.div);
+
+      pageContent.div.addEventListener("click", function (e) {
+        console.log(e.target);
+      });
+    </script>
+  </body>
+</html>
